@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Resume
+title:
 permalink: /resume/
 ---
 
-Click here to download a copy of my resume!
-hello there
+Click <a href="{{ site.url }}/assets/resume.pdf">Here</a> to download a copy of my resume!
+
 
