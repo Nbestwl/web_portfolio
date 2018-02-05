@@ -6,21 +6,28 @@ permalink: /projects/
 {% include header.html %}
 
 <div class="row example-split" style="padding-left: 400px; padding-right: 400px;">
-        <div class="col-md-12 example-title">
-            <h2>Personal Projects</h2>
+        <div class="col-md-12 example-title" id="parent">
+            <div id="svgAttributes">
+                <svg width="128" height="128" viewBox="0 0 128 128">
+                    <polygon points="64 68.64242388517302 8.574 99.99983666541961 63.44375937622618 67.67854305554292 64 3.9998366654196085 64.55624062377382 67.67854305554292 119.426 99.99983666541961 " fill="#42f4f1">
+                    </polygon>
+                </svg>
+            </div>
+            <div id="child">
+                <h2>Applications</h2>
+            </div>
         </div>
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
             <ul class="timeline timeline-split">
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <span>Sept 2017 - Current</span>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">WOLF - Machine Learning Web Application</h3>
                         <p><a href="http://pcc.ittc.ku.edu/wolf/user/">(link to the website here)</a></p>
                         <div style="font-size: 30px; white-space: nowrap;">
-                            <i class="devicon-codeigniter-plain-wordmark colored"></i>
+                            <i id="icon1" class="devicon-codeigniter-plain-wordmark colored"></i>
                             <i class="devicon-php-plain colored"></i>
                             <i class="devicon-html5-plain-wordmark colored"></i>
                             <i class="devicon-css3-plain-wordmark colored"></i>
@@ -88,8 +95,16 @@ permalink: /projects/
             </ul>
         </div>
 
-        <div class="col-md-12 example-title">
-            <h2>Academic</h2>
+        <div class="col-md-12 example-title" id="parent">
+            <div id="svgAttributes">
+                <svg width="128" height="128" viewBox="0 0 128 128">
+                    <polygon points="64 68.64242388517302 8.574 99.99983666541961 63.44375937622618 67.67854305554292 64 3.9998366654196085 64.55624062377382 67.67854305554292 119.426 99.99983666541961 " fill="yellow">
+                    </polygon>
+                </svg>
+            </div>
+            <div id="child">
+                <h2>Academic</h2>
+            </div>
         </div>
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
             <ul class="timeline timeline-split">
@@ -105,11 +120,22 @@ permalink: /projects/
                         <p>In this course, we used multiple GIS libraries in R to analyze hurricane Ike in 2008 and came up with interesting and useful results of correlations between prediction accurarcy and corresponding attributes</p>
                     </div>
                 </li>
+                <li class="timeline-item period">
+                    <div class="timeline-info"></div>
+                </li>
             </ul>
         </div>
 
-        <div class="col-md-12 example-title">
-            <h2>Teaching</h2>
+        <div class="col-md-12 example-title" id="parent">
+            <div id="svgAttributes">
+                <svg width="128" height="128" viewBox="0 0 128 128">
+                    <polygon points="64 68.64242388517302 8.574 99.99983666541961 63.44375937622618 67.67854305554292 64 3.9998366654196085 64.55624062377382 67.67854305554292 119.426 99.99983666541961 " fill="pink">
+                    </polygon>
+                </svg>
+            </div>
+            <div id="child">
+                <h2>Teaching</h2>
+            </div>
         </div>
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
             <ul class="timeline timeline-split">
@@ -124,13 +150,53 @@ permalink: /projects/
                         <p>I am a graduate teaching assitant and i help Dr.Kong managing labs and delivering course materials. I help students implementing various important data structures like linked list, hash table and binary search tree. The primary programming language for this course is C++.</p>
                     </div>
                 </li>
+                <li class="timeline-item period">
+                    <div class="timeline-info"></div>
+                </li>
             </ul>
         </div>
 
     </div>
 
-
-</body>
-</html>
+    <br>
+    <br>
+    <br>
 
 {% include footer.html %}
+
+<style type="text/css">
+    #parent {
+        position: relative;
+    }
+    #child {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<script type="text/javascript">
+    $('#icon').mouseover(function() {
+        $(this).addClass('animated bounce');
+    });
+
+    $("#icon").mouseleave(function() {
+        $(this).removeClass('animated bounce');
+    });
+
+    $('#icon1').mouseover(function() {
+        $(this).addClass('animated bounce');
+    });
+
+    $("#icon1").mouseleave(function() {
+        $(this).removeClass('animated bounce');
+    });
+
+    var svgAttributes = anime({
+        targets: '#svgAttributes polygon',
+        points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96',
+        easing: 'easeInOutExpo'
+    });
+
+</script>
