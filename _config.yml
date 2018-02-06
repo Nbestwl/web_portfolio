@@ -16,7 +16,7 @@
 title: Lei Wang
 email: 62lwang@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my first website. Coming soon...
+  personal web porfolio
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nbestwl.github.io/web_portfolio/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
